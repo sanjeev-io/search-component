@@ -137,17 +137,6 @@ export const compress = () => {
     .pipe(dest('bundled'));
 };
 
-// export const pot = () => {
-//   return src('**/*.php')
-//     .pipe(
-//       wpPot({
-//         domain: '_waituk_theme_text_domain',
-//         package: info.name
-//       })
-//     )
-//     .pipe(dest(`languages/${info.name}.pot`));
-// };
-
 // Watch tasks
 export const watchForChanges = () => {
   watch(paths.srcSCSS, styles);
