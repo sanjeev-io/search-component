@@ -129,6 +129,14 @@ export const reload = done => {
   done();
 };
 
+// Compress and export theme package
+export const compress = () => {
+  return src(['**/*', '!node_modules{,/**}', '!bundled{,/**}', '!src{,/**}', '!.babelrc', '!.gitignore', '!gulpfile.babel.js', '!package.json', '!package-lock.json'])
+    .pipe(gulpif(file => file.relative.split('.').pop() !== 'zip', replace('_waituk_themename', info.name)))
+    .pipe(zip(`${info.name}.zip`))
+    .pipe(dest('bundled'));
+};
+
 // Watch tasks
 export const watchForChanges = () => {
   watch(paths.srcSCSS, styles);
