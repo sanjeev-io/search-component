@@ -1,0 +1,9 @@
+/* Files to import */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './components/material-icons/material-icons';
+@import './base/resets';
+@import './base/grid';
+@import './base/base';
+@import './components/header/header';

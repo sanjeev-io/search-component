@@ -1,0 +1,33 @@
+// #header {
+//   .material-icons {
+//     vertical-align: middle;
+//   }
+// }
+
+#wuk-header {
+  .search-box {
+    max-width: 444px;
+    height: 40px;
+    border-radius: 4px;
+    // border: solid 1px var(--white-four);
+  }
+}
+
+/*SVG ICON SYSTEM*/
+.icon {
+  display: inline-flex;
+  align-self: center;
+}
+
+.icon svg,
+.icon img {
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+}
+
+.icon.baseline svg,
+.icon img {
+  top: 0.125em;
+  position: relative;
+}
